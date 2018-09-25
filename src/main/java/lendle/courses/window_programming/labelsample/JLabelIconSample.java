@@ -36,9 +36,11 @@ public class JLabelIconSample {
         //1. 利用 url 建立 ImageIcon
         //2. 取得 scaled instance
         //3. 設定到 label1
-        //ImageIcon icon=new ImageIcon(new URL());
+        ImageIcon icon = new ImageIcon(new URL("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ9QJjcalDFFBJEwISoRhhGtbP12ne_vnNt-0j5ujJjKJETE2i"));
+        Image img = icon.getImage().getScaledInstance(25, 25, Image.SCALE_SMOOTH);
+        ImageIcon icon2 = new ImageIcon(img);
         //Icon icon2=new ImageIcon(icon.getImage().getScaledInstance());
-        
+        label1.setIcon(icon2);
         ////////////////////////////
      
         frame.add(label1);
